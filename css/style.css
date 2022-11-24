@@ -1,0 +1,197 @@
+/* Root */
+
+:root {
+    --primary: #4285F4;
+    --light-gray: #9aa0a6;
+    --gray: #202124;
+    --dark-gray: #171717;
+    --white: #fff;
+    --lighter-gray: #303134;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+* {
+    font-family: 'Poppins';
+}
+a {
+    text-decoration: none;
+}
+
+/* Header */
+
+header {
+    width: 100%;
+    background-color: var(--dark-gray);
+    position: fixed;
+}
+.header-items {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1vh 2vh;
+}
+.header-items .logo img {
+    width: 3em;
+}
+.header-items .links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0;
+    align-items: center;
+}
+.header-items .links li {
+    list-style: none;
+    margin: 0 5%;
+}
+.header-items .links li a {
+    color: var(--light-gray);
+    font-size: 1.2em;
+    transition: color 0.5s;
+    text-transform: capitalize;
+    text-align: center;
+    display: flex;
+}
+.header-items .links li a:hover:not(a.active) {
+    color: var(--white);
+}
+header .active {
+    font-weight: 700;
+    color: var(--white) !important;
+}
+
+/* Main */
+
+main {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main .wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+main .wrapper .title {
+    margin-bottom: 3%;
+}
+main .wrapper .title h1, p {
+    text-align: center;
+    margin: 0;
+    color: var(--white);
+}
+main .wrapper .title h1 {
+    font-size: 5em;
+}
+main .wrapper .title p {
+    font-size: 2em;
+}
+main .wrapper form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+main .wrapper form .searchbar {
+    width: 100%;
+    display: flex;
+}
+main .wrapper form .searchbar input {
+    width: 90%;
+    background-color: var(--gray);
+    border: 1px solid #5f6368;
+    height: 44px;
+    border-radius: 24px;
+    padding: 0 5%;
+    font-size: 1em;
+    color: var(--white);
+    transition: border 0.3s;
+}
+main .wrapper form .searchbar input:hover {
+    border: 1px solid var(--white);
+}
+main .wrapper form .searchbar input:focus::placeholder {
+    color: transparent;
+}
+main .wrapper form .searchbar button {
+    width: 8%;
+    display: flex;
+    margin-left: 2%;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: transparent;
+    cursor: pointer;
+    transition: all 0.3s;
+    border-radius: 40px;
+}
+main .wrapper form .searchbar button:hover {
+    background-color: var(--lighter-gray);
+}
+main .wrapper form .searchbar i {
+    font-size: 1.5em;
+    color: white;
+}
+main .wrapper form .buttons {
+    display: flex;
+    justify-content: center;
+    flex: 2;
+}
+main .wrapper form .buttons input {
+    background-color: var(--lighter-gray);
+    border: 1px solid var(--lighter-gray);
+    border-radius: 24px;
+    padding: 0 2em;
+    height: 44px;
+    cursor: pointer;
+    color: var(--white);
+    margin: 5%;
+    font-size: 0.9em;
+    transition: all 0.3s;
+}
+main .wrapper form .buttons input:hover {
+    background-color: var(--light-gray);
+}
+
+/* Media */
+
+@media screen and (max-width: 768px) {
+    header .header-items {
+        flex-direction: column;
+        padding: 3vh 2vh;
+    }
+    main .wrapper .title h1 {
+        font-size: 3.5em;
+    }
+    main .wrapper .title p {
+        font-size: 1.6em;
+    }
+    main .wrapper form .searchbar input {
+        font-size: 0.8em;
+    }
+}
+@media screen and (max-width: 480px) {
+    header .header-items {
+        flex-direction: column;
+    }
+    header .links {
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+    }
+    main .wrapper .title h1 {
+        font-size: 2em;
+    }
+    main .wrapper .title p {
+        font-size: 1em;
+    }
+    main .wrapper form .buttons input {
+        font-size: 0.8em;
+    }
+}
