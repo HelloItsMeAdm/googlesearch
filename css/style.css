@@ -80,7 +80,7 @@ main .wrapper {
 main .wrapper .title {
     margin-bottom: 5%;
 }
-main .wrapper .title h1, p {
+main .wrapper .title h1, p, h2 {
     text-align: center;
     margin: 0;
     color: var(--white);
@@ -163,12 +163,21 @@ main .wrapper form .buttons input:hover {
 }
 main .wrapper form .row p {
     margin-right: 3%;
+    text-align: right;
 }
 main .wrapper form .row.with-text {
     justify-content: flex-end;
 }
 main .wrapper form .row.with-text input {
     max-width: 300px;
+}
+main .wrapper .subtitle {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 5%;
+    font-size: 1.5em;
 }
 
 /* Media */
